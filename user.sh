@@ -1,26 +1,43 @@
 #!/bin/bash
 
-# Cek apakah script dijalankan sebagai root
+# === WARNA ===
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[1;33m'
+BLUE='\033[1;34m'
+CYAN='\033[0;36m'
+NC='\033[0m' # No Color
+
+# === CEK ROOT ===
 if [ "$EUID" -ne 0 ]; then
-  echo "Harap jalankan script ini sebagai root (sudo)"
+  echo -e "${RED}[✘] Harap jalankan script ini sebagai root (sudo)${NC}"
   exit 1
 fi
 
-# Buat user ryzz
-echo "[+] Membuat user 'ryzz'..."
-useradd -m -s /bin/bash ryzz
+# === CEK USER ===
+if id "ryzz" &>/dev/null; then
+  echo -e "${YELLOW}[!] User 'ryzz' sudah ada.${NC}"
+else
+  echo -e "${BLUE}[+] Membuat user '${CYAN}ryzz${BLUE}'...${NC}"
+  useradd -m -s /bin/bash ryzz
 
-# Set password
-echo "[+] Mengatur password untuk 'ryzz'..."
-echo "ryzz:ryzz" | chpasswd
+  echo -e "${BLUE}[+] Mengatur password...${NC}"
+  echo "ryzz:ryzz" | chpasswd
 
-# Tambahkan ke grup sudo
-echo "[+] Menambahkan 'ryzz' ke grup sudo..."
-usermod -aG sudo ryzz
+  echo -e "${BLUE}[+] Menambahkan '${CYAN}ryzz${BLUE}' ke grup sudo...${NC}"
+  usermod -aG sudo ryzz
 
-# Cek apakah user sudah berhasil dibuat dan masuk grup sudo
-echo "[+] Verifikasi..."
+  echo -e "${GREEN}[✓] User '${CYAN}ryzz${GREEN}' berhasil dibuat.${NC}"
+fi
+
+# === VERIFIKASI ===
+echo -e "${YELLOW}------------------------------${NC}"
+echo -e "${CYAN}Info User:${NC}"
 id ryzz
 groups ryzz
+echo -e "${YELLOW}------------------------------${NC}"
 
-echo "[✓] Selesai. User 'ryzz' siap digunakan."
+# === LOGIN KE USER ===
+echo -e "${BLUE}[→] Login ke user '${CYAN}ryzz${BLUE}' sekarang...${NC}"
+sleep 2
+su - ryzz
