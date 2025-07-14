@@ -10,17 +10,17 @@ NC='\033[0m'
 
 # === MENU ===
 clear
-echo -e "${CYAN}╔══════════════════════════════════════════════════════╗"
-echo -e "${CYAN}║   ${YELLOW}PILIHAN SCRIPT OTOMATIS BY RYZZ    ${CYAN}║"
-echo -e "${CYAN}╠══════════════════════════════════════════════════════╣"
-echo -e "${CYAN}║ ${GREEN}1.${NC} Install Pterodactyl Panel     ${CYAN}║"
-echo -e "${CYAN}║ ${GREEN}2.${NC} Install Tema                  ${CYAN}║"
-echo -e "${CYAN}║ ${GREEN}3.${NC} Install Tema 2                ${CYAN}║"
-echo -e "${CYAN}║ ${GREEN}4.${NC} Protect Panel                 ${CYAN}║"
-echo -e "${CYAN}║ ${GREEN}5.${NC} Adduser Parasit               ${CYAN}║"
-echo -e "${CYAN}║ ${GREEN}6.${NC} Enable Ftp Ryzz               ${CYAN}║"
-echo -e "${CYAN}║ ${GREEN}0.${NC} Keluar                        ${CYAN}║"
-echo -e "${CYAN}╚══════════════════════════════════════════════════════╝"
+echo -e "${CYAN}══════════════════════════════════════════════════════"
+echo -e      ${YELLOW}PILIHAN SCRIPT OTOMATIS BY RYZZ
+echo -e "${CYAN}══════════════════════════════════════════════════════"
+echo -e ${GREEN}1.${NC} Install Pterodactyl Panel
+echo -e ${GREEN}2.${NC} Install Tema
+echo -e ${GREEN}3.${NC} Install Tema 2
+echo -e ${GREEN}4.${NC} Protect Panel
+echo -e ${GREEN}5.${NC} Adduser Parasit
+echo -e ${GREEN}6.${NC} Enable Ftp Ryzz
+echo -e ${GREEN}0.${NC} Keluar
+echo -e "${CYAN}══════════════════════════════════════════════════════"
 echo
 
 read -p "$(echo -e ${YELLOW}Pilih nomor [0-6]: ${NC})" pilihan
