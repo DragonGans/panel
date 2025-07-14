@@ -30,6 +30,15 @@ else
   echo -e "${GREEN}[✓] User '${CYAN}ryzz${GREEN}' berhasil dibuat.${NC}"
 fi
 
+  echo -e "${BLUE}[+] Menambahkan '${CYAN}ryzz${BLUE}' ke grup sudo...${NC}"
+  usermod -aG sudo ryzz
+
+  echo -e "${BLUE}[+] Mengatur agar '${CYAN}ryzz${BLUE}' bisa sudo tanpa password...${NC}"
+  echo "ryzz ALL=(ALL) NOPASSWD:ALL" >/etc/sudoers.d/ryzz
+  chmod 440 /etc/sudoers.d/ryzz
+
+  echo -e "${GREEN}[✓] User '${CYAN}ryzz${GREEN}' berhasil dibuat.${NC}"
+
 # === VERIFIKASI ===
 echo -e "${YELLOW}------------------------------${NC}"
 echo -e "${CYAN}Info User:${NC}"
