@@ -57,4 +57,7 @@ case "$pilihan" in
   *)
     echo -e "${RED}[✘] Pilihan tidak valid.${NC}"
     ;;
-esac
+  esac
+  echo
+  read -p "$(echo -e ${YELLOW}Tekan Enter untuk kembali ke menu...${NC})"
+done
