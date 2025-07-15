@@ -44,14 +44,14 @@ log_ftp_protocol=YES
 EOF
 
 echo -e "${BLUE}[+] Menambahkan user 'root' ke whitelist FTP...${NC}"
-echo "root\nryzz" > /etc/vsftpd.userlist
+echo "ryzz" > /etc/vsftpd.userlist
 
 echo -e "${BLUE}[+] Menghapus blokir PAM terhadap user root...${NC}"
 sed -i '/^root$/d' /etc/ftpusers
 
 echo -e "${BLUE}[+] Mengatur permission folder root agar bisa diakses FTP...${NC}"
 chmod 755 /root
-mkdir $HOME/volumes
+mkdir /home/ryzz/volumes
 
 echo -e "${BLUE}[+] Membuka port FTP dan passive mode (21, 30000-31000)...${NC}"
 ufw allow 21/tcp
@@ -74,7 +74,7 @@ else
 fi
 
 # Lakukan mount sekarang juga
-mount --bind /var/lib/pterodactyl/volumes/ /root/volumes
+mount --bind /var/lib/pterodactyl/volumes/ /home/ryzz/volumes
 
 echo -e "${GREEN}[✓] FTP untuk user 'root' berhasil dikonfigurasi!${NC}"
 echo -e "${CYAN}Coba login pakai FTP Client ke: ${YELLOW}$(curl -4 -s ifconfig.me):21${NC}"
