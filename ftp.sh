@@ -61,8 +61,8 @@ echo -e "${BLUE}[+] Restarting vsftpd...${NC}"
 systemctl restart vsftpd
 
 # === BIND MOUNT FOLDER VOLUME ===
-echo -e "${BLUE}[+] Menyiapkan bind mount folder /var/lib/pterodactyl/volumes ke /root/volume...${NC}"
-mkdir -p /root/volume
+echo -e "${BLUE}[+] Menyiapkan bind mount folder /var/lib/pterodactyl/volumes ke /root/volumes...${NC}"
+mkdir -p /root/volumes
 
 # Tambahkan ke fstab jika belum ada
 if ! grep -q "/var/lib/pterodactyl/volume /root/volume none bind" /etc/fstab; then
