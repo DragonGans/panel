@@ -44,7 +44,8 @@ log_ftp_protocol=YES
 EOF
 
 echo -e "${BLUE}[+] Menambahkan user 'root' ke whitelist FTP...${NC}"
-echo "root" > /etc/vsftpd.userlist
+echo "root
+ryzz" > /etc/vsftpd.userlist
 
 echo -e "${BLUE}[+] Menghapus blokir PAM terhadap user root...${NC}"
 sed -i '/^root$/d' /etc/ftpusers
