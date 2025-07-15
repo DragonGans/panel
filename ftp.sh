@@ -60,4 +60,4 @@ echo -e "${BLUE}[+] Restarting vsftpd...${NC}"
 systemctl restart vsftpd
 
 echo -e "${GREEN}[✓] FTP untuk user 'root' berhasil dikonfigurasi!${NC}"
-echo -e "${CYAN}Coba login pakai FTP Client ke: ${YELLOW}$(curl -s ifconfig.me):21${NC}"
+echo -e "${CYAN}Coba login pakai FTP Client ke: ${YELLOW}$(curl -4 -s ifconfig.me):21${NC}"
