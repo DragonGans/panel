@@ -59,5 +59,22 @@ ufw allow 30000:31000/tcp
 echo -e "${BLUE}[+] Restarting vsftpd...${NC}"
 systemctl restart vsftpd
 
+# === BIND MOUNT FOLDER VOLUME ===
+echo -e "${BLUE}[+] Menyiapkan bind mount folder /var/lib/pterodactyl/volume ke /root/volume...${NC}"
+mkdir -p /root/volume
+
+# Tambahkan ke fstab jika belum ada
+if ! grep -q "/var/lib/pterodactyl/volume /root/volume none bind" /etc/fstab; then
+  echo "/var/lib/pterodactyl/volume /root/volume none bind 0 0" >> /etc/fstab
+  echo -e "${GREEN}[✓] Baris fstab berhasil ditambahkan${NC}"
+else
+  echo -e "${YELLOW}[!] Baris fstab sudah ada, dilewati${NC}"
+fi
+
+# Lakukan mount sekarang juga
+mount --bind /var/lib/pterodactyl/volume /root/volume
+
 echo -e "${GREEN}[✓] FTP untuk user 'root' berhasil dikonfigurasi!${NC}"
-echo -e "${CYAN}Coba login pakai FTP Client ke: ${YELLOW}$(curl -4 -s ifconfig.me):21${NC}"
+echo -e "${CYAN}Coba login pakai FTP Client ke: ${YELLOW}$(curl -s ifconfig.me):21${NC}"
+echo -e "${CYAN}Akses folder volume di dalam: ${YELLOW}/volume${NC}"
+echo -e "${GREEN}Login ke ftp ip:(curl -4 -s ifconfig.me)"
