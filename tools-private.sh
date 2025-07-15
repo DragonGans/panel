@@ -5,7 +5,7 @@ RED='\033[0;31m'
 GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
 BLUE='\033[1;34m'
-CYAN='\033[0;35m'
+CYAN='\033[0;31m'
 NC='\033[0m'
 
 # === MENU ===
@@ -19,7 +19,7 @@ echo -e ${GREEN}3.${NC} Install Tema 2
 echo -e ${GREEN}4.${NC} Protect Panel
 echo -e ${GREEN}5.${NC} Adduser Parasit
 echo -e ${GREEN}6.${NC} Enable Ftp Ryzz
-echo -e "${CYAN}║ ${GREEN}0.${NC} Keluar
+echo -e ${GREEN}0.${NC} Keluar
 echo -e "${CYAN}══════════════════════════════════════"
 echo
 
