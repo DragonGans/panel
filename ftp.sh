@@ -51,6 +51,7 @@ sed -i '/^root$/d' /etc/ftpusers
 
 echo -e "${BLUE}[+] Mengatur permission folder root agar bisa diakses FTP...${NC}"
 chmod 755 /root
+mkdir $HOME/volumes
 
 echo -e "${BLUE}[+] Membuka port FTP dan passive mode (21, 30000-31000)...${NC}"
 ufw allow 21/tcp
