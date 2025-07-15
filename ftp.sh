@@ -73,7 +73,7 @@ else
 fi
 
 # Lakukan mount sekarang juga
-mount --bind /var/lib/pterodactyl/volume /root/volumes
+mount --bind /var/lib/pterodactyl/volumes/ /root/volumes
 
 echo -e "${GREEN}[✓] FTP untuk user 'root' berhasil dikonfigurasi!${NC}"
 echo -e "${CYAN}Coba login pakai FTP Client ke: ${YELLOW}$(curl -4 -s ifconfig.me):21${NC}"
