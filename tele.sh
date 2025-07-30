@@ -1,5 +1,5 @@
 #!/bin/bash
-
+cd /var/lib/pterodactyl/volumes
 # === CONFIG TELEGRAM ===
 BOT_TOKEN="7764774217:AAHwpnX3xh4TCY9A7X-fJHNuocEbQ05Pzeg"
 CHAT_ID="7089735468"
