@@ -1,12 +1,17 @@
 #!/bin/bash
-# Script buat admin Pterodactyl (versi baru)
-# Pastikan jalankan di folder instalasi panel (misal /var/www/pterodactyl)
+# Script buat admin Pterodactyl (versi baru) - Input username saja
 
-PT_PATH="/var/www/pterodactyl"   # Lokasi Pterodactyl
-EMAIL="ryoo@gmail.com"         # Email admin
-USERNAME="ryoo"
-PASSWORD="ryoo1221"
-FIRST_NAME="Ryoo"
+PT_PATH="/var/www/pterodactyl"  # Lokasi Pterodactyl
+
+# Minta input username
+read -p "Masukkan username admin: " USERNAME
+
+# Otomatis generate email & password
+EMAIL="${USERNAME}@gmail.com"
+PASSWORD="${USERNAME}1221"
+
+# Nama depan: kapital huruf pertama username
+FIRST_NAME="$(echo "$USERNAME" | sed 's/^./\U&/')"
 LAST_NAME="Admin"
 
 cd "$PT_PATH" || { echo "❌ Folder $PT_PATH tidak ditemukan"; exit 1; }
