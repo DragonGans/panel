@@ -18,7 +18,7 @@ php artisan p:user:make \
     --name-first="$FIRST_NAME" \
     --name-last="$LAST_NAME" \
     --password="$PASSWORD" \
-    --admin=1
+    --admin=1 \
     -q
 
 echo "✅ Admin berhasil dibuat!"
