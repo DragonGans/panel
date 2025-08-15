@@ -3,7 +3,7 @@
 # Pastikan jalankan di folder instalasi panel (misal /var/www/pterodactyl)
 
 PT_PATH="/var/www/pterodactyl"   # Lokasi Pterodactyl
-EMAIL="ryoo@example.com"         # Email admin
+EMAIL="ryoo@gmail.com"         # Email admin
 USERNAME="ryoo"
 PASSWORD="ryoo1221"
 FIRST_NAME="Ryoo"
