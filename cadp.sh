@@ -16,6 +16,13 @@ LAST_NAME="Admin"
 
 cd "$PT_PATH" || { echo "❌ Folder $PT_PATH tidak ditemukan"; exit 1; }
 
+# Ambil domain dari file .env (APP_URL)
+if [ -f "$PT_PATH/.env" ]; then
+    DOMAIN=$(grep ^APP_URL= "$PT_PATH/.env" | cut -d '=' -f2-)
+else
+    DOMAIN="http://localhost"
+fi
+
 # Jalankan artisan untuk membuat user admin
 php artisan p:user:make \
     --email="$EMAIL" \
