@@ -32,7 +32,11 @@ php artisan p:user:make \
     --password="$PASSWORD" \
     --admin=1 \
 
+echo ""
 echo "✅ Admin berhasil dibuat!"
+echo "=============================="
+echo "Panel    : $DOMAIN"
 echo "Username : $USERNAME"
 echo "Password : $PASSWORD"
 echo "Email    : $EMAIL"
+echo "=============================="
