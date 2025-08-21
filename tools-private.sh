@@ -31,16 +31,16 @@ while true; do
 ╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
 EOF
   echo -e "${CYAN}════════════════════════════════════════════════════${NC}"
-  echo -e "${YELLOW}        HACKTOOLS BY BIMZXRYOOXNERU${NC}"
+  echo -e "${YELLOW}        Tools gabut by all member 1221${NC}"
   echo -e "${CYAN}════════════════════════════════════════════════════${NC}\n"
 
   echo -e "${GREEN} 1.${NC} Install Pterodactyl Panel"
   echo -e "${GREEN} 2.${NC} Install Tema"
   echo -e "${GREEN} 3.${NC} Install Tema 2"
   echo -e "${GREEN} 4.${NC} Protect Panel"
-  echo -e "${GREEN} 5.${NC} Adduser ryzz"
-  echo -e "${GREEN} 6.${NC} Enable FTP Ryzz"
-  echo -e "${GREEN} 7.${NC} Maling SC Bot"
+  echo -e "${GREEN} 5.${NC} Adduser vps"
+  echo -e "${GREEN} 6.${NC} Enable FTP"
+  echo -e "${GREEN} 7.${NC} Maling SC"
   echo -e "${GREEN} 8.${NC} Install RDP"
   echo -e "${GREEN} 9.${NC} Create ADP"
   echo -e "${GREEN}10.${NC} Intip Server"
