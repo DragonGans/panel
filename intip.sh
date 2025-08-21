@@ -18,7 +18,7 @@ banner() {
     echo "   ██║        ██║   ███████╗██║     ██║     ██║  ██║   ██║   ██║╚██████╔╝╚██████╔╝"
     echo "   ╚═╝        ╚═╝   ╚══════╝╚═╝     ╚═╝     ╚═╝  ╚═╝   ╚═╝   ╚═╝ ╚═════╝  ╚═════╝ "
     echo -e "${reset}"
-    echo -e "${cyan}      >> Pterodactyl Log Viewer by Bima <<${reset}\n"
+    echo -e "${cyan}      >> Pterodactyl Log Viewer by RyooXneru <<${reset}\n"
 }
 
 # Menu utama
