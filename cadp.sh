@@ -80,7 +80,7 @@ case $MENU in
     echo -e "${RED}⚠️ Mode hapus user!${RESET}"
     echo -e "${CYAN}Jalankan command berikut: ${RESET}"
     echo ""
-    echo -e "${YELLOW}php $PT_PATH/artisan p:user:delete${RESET}"
+    php $PT_PATH/artisan p:user:delete
     echo ""
     echo -e "${CYAN}Tekan [ENTER] untuk keluar...${RESET}"
     read
