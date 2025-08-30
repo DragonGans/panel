@@ -6,7 +6,7 @@ read -p "Masukkan jumlah thread (default: 5): " THREADS
 THREADS=${THREADS:-5}
 USER="root"
 
-PASSLIST=("VPSKONTOL#32GB" "VPSKONTOL#16GB" "SYAH#16GB" "KENNY#16GB" "KENNY#32GB" "SYAH#32GB")
+PASSLIST=("VPSKONTOL#32GB" "VPSKONTOL#16GB" "SYAH#16GB" "RAFLY#16GB" "KENNY#16GB" "SYAH#32GB" "KENNY#32GB" "RAFLY#32GB" "VPSKONTOL#8GB" "SYAH#8GB" "KENNY#8GB" "RAFLY#8GB")
 
 echo "[*] Menjalankan subfinder..."
 subfinder -d "$DOMAIN" -silent > temp_allsubs.txt
